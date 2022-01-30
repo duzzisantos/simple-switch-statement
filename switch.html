@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Statement</title>
+
+    <style>
+        body {
+            background-color: black;
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            text-align: center;
+        }
+
+        #wrapper-left,
+        #wrapper-right {
+            height: 500px;
+            width: 50%;
+            border: 1px solid #011414;
+        }
+
+        #wrapper-left {
+            text-align: center;
+        }
+
+        #wrapper-right {
+            overflow: hidden;
+        }
+
+        #btn1, #btn2, #btn3 {
+            border: 1px solid #08A045;
+            padding: 14px;
+            color: #08A045;
+            width: 100px;
+            background-color: transparent;
+            margin-top: 25%;
+            border-radius: 50px;
+            border-right: 1px solid cornflowerblue;
+            border-bottom: 1px solid teal;
+        }
+
+
+        details {
+            width: 80%;
+            margin-left: 10%;
+            text-align: left;
+            color: #08A045;
+            margin-top: 12%;
+            height: 40px;
+        }
+        ol li{
+            color: bisque;
+        }
+
+       h1, h3{
+            color: #08A045;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Switch Statements</h1>
+    <div class="container">
+        <div id="wrapper-left">
+            <h3>Click any of these buttons to dialogue with the system</h3>
+            <button id="btn1" type="button" onclick="zoneA()">Zone A:</button>
+            <button id="btn2" type="button" onclick="zoneB()">Zone B</button>
+            <button id="btn3" type="button" onclick="zoneC()">Zone C</button>
+        </div>
+        <div id="wrapper-right">
+            <h5>Hint of data to supply to the dialogue</h5>
+            <details>
+                <summary>Zone A data</summary>
+                <ol>
+                    <li>Owerri</li>
+                    <li>Aba</li>
+                    <li>Abakiliki</li>
+                    <li>Enugu</li>
+                </ol>
+            </details>
+            <details>
+                <summary>Zone B data</summary>
+                <ol>
+                    <li>Akure</li>
+                    <li>Ibadan</li>
+                    <li>Abeokuta</li>
+                    <li>Lagos</li>
+                </ol>
+            </details>
+            <details>
+                <summary>Zone C data</summary>
+                <ol>
+                    <li>Kaduna</li>
+                    <li>Abuja</li>
+                    <li>Lafia</li>
+                    <li>Kano</li>
+                </ol>
+            </details>
+        </div>
+    </div>
+</body>
+<script>
+    const zoneA = () => {
+        let firstBtn = document.getElementById("btn1");
+        firstBtn.addEventListener("click", (e) => {
+            e.preventDefault();
+            switch (prompt("Type in any of the cities listed in Zone A")) {
+                case "Owerri":
+                    alert("Owerri is in Zone A");
+                    break;
+                case "Aba":
+                    alert("Aba is in Zone A");
+                    break;
+                case "Abakiliki":
+                    alert("Abakiliki is in Zone A");
+                    break;
+                case "Enugu":
+                    alert("Enugu is in zone A");
+                    break;
+            }
+        })
+
+    }
+
+    const zoneB = () => {
+        let secondBtn = document.getElementById("btn2");
+        secondBtn.addEventListener("click", (e) => {
+            e.preventDefault();
+            switch (prompt("Type in any of the cities listed in Zone B")) {
+                case "Akure":
+                    alert("Akure is in Zone B");
+                    break;
+                case "Ibadan":
+                    alert("Ibadan is in Zone B");
+                    break;
+                case "Abeokuta":
+                    alert("Abeokuta is in Zone B");
+                    break;
+                case "Lagos":
+                    alert("Lagos is in zone B");
+                    break;
+            }
+        })
+    }
+
+    const zoneC = () => {
+        let thirdBtn = document.getElementById("btn3");
+        thirdBtn.addEventListener("click", (e) => {
+            e.preventDefault()
+            switch (prompt("Type in any of the cities listed in Zone C")) {
+                case "Kaduna":
+                    alert("Kaduna is in Zone C");
+                    break;
+                case "Abuja":
+                    alert("Abuja is in Zone C");
+                    break;
+                case "Lafia":
+                    alert("Lafia is in Zone C");
+                    break;
+                case "Kano":
+                    alert("Kano is in zone C");
+                    break;
+            }
+        })
+    }
+</script>
+
+</html>
